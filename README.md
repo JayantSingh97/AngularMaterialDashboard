@@ -4,6 +4,14 @@
 1. This is an admin dashboard template created on angular material. this project covers most of the components of angular material.
 2. All the dependencies are listed down in tabular form which have been used in this project.
 
+#Dashbard UI
+
+1.UI 1
+![alt text](https://lh3.googleusercontent.com/B_OTuabWbqaijRSgzejor3ie2b45A2EfkFBRjX3Zm1d4yUg8x083YazDa-DePRcIfumnksrgNk2sEZLkjApmSltXuhvDNkQANASgvIB54YDTiZd-UIKEWJPVc5MSQ_PqekG19yBA=w1280-h618-no)
+
+2.UI 2
+ 
+![alt text](https://lh3.googleusercontent.com/qTyiOc_Fi_bOp795V8cDhdlytVnA19laIsrpWtvzptmrSf1S0f0LjmLf_ytKBI1932h2zfuPleXrBi1KjJoy2KkSP9c1ZtfHOTT_Hv07NuwDUqMfxWZEvsyoYuPN94aLb9lSIRSP=w1280-h610-no)
 ***
 # project Configuration information.
 1. If you are facing any compilation issue then simply run the following command in your command prompt under your AngularApplication       directory.
