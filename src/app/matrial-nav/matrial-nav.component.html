@@ -1,0 +1,83 @@
+<div [class.Material-dark-theme]="isDarkmodeActivated">
+    <mat-sidenav-container class="sidenav-container" [class.unicorn-light-theme]="!isDarkmodeActivated">
+        <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+                     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                     [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                     [opened]="!(isHandset$ | async)">
+            <mat-toolbar color="primary"><mat-icon>view_agenda</mat-icon> Materail Menu</mat-toolbar>
+            <mat-nav-list>
+                <a mat-menu-item   routerLink="/dashboard"><mat-icon>dashboard</mat-icon> Dashboard</a>
+
+                <a mat-menu-item routerLink="/table"><mat-icon>view_module</mat-icon> Materail Table</a>
+
+                <a mat-menu-item routerLink="/Drag"><mat-icon>chrome_reader_mode</mat-icon> Materail Drag</a>
+            </mat-nav-list>
+
+            <mat-nav-list>
+                <a mat-menu-item routerLink="/angularbtn"><mat-icon>play_circle_outline</mat-icon><span></span> Materail button</a>
+
+                <a mat-menu-item routerLink="/angularform"><mat-icon>credit_card</mat-icon> Materail From</a>
+
+                <a mat-menu-item routerLink="/MatrialStepper"><mat-icon>dynamic_feed</mat-icon> Materail Stepper</a>
+            </mat-nav-list> 
+            <mat-nav-list>
+                <a mat-menu-item routerLink='/materialDatepicker'><mat-icon>date_range</mat-icon> Materail DatePicker</a>
+
+                <a mat-menu-item routerLink='/materialimg'><mat-icon>sentiment_satisfied_alt</mat-icon> Materail Img</a>
+
+                <a mat-menu-item routerLink="/MatrialDialog"><mat-icon>add_to_queue</mat-icon> Materail dialog</a>
+                <a mat-menu-item routerLink="/Chart"><mat-icon>add_to_queue</mat-icon> Angular Chart</a>
+
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <mat-toolbar color="primary">
+                <button type="button"
+                        aria-label="Toggle sidenav"
+                        mat-icon-button
+                        (click)="drawer.toggle()">
+                    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                </button>
+                <span> AngularMaterial</span>
+                <span class="example-fill-remaining-space"></span>
+                <button mat-button color="default" (click)="ActivateDarktheme()">
+                    <mat-icon>brightness_4</mat-icon>
+                </button>
+                <button mat-button color="default"><mat-icon>account_circle</mat-icon> Welcome : User</button>
+
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>account_circle</mat-icon>
+                        <span>Welcome</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>settings_applications</mat-icon>
+                        <span>Settings</span>
+                    </button>
+
+                    <button mat-menu-item>
+                        <mat-icon>power_settings_new</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar>
+            <div class="content" [@routerAnimation]="getRouteAnimation(router)">
+                    <router-outlet #router="outlet"></router-outlet>
+                  </div>
+                  
+                  
+                  
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+</div>
+
+
+
+
+
+

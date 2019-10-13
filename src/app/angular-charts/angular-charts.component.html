@@ -1,0 +1,28 @@
+<div class="grid-container">
+    <h1 class="mat-h1" color="Primary">
+        <span><mat-icon>dashboard</mat-icon> Angular Charts</span>
+    </h1>
+    <mat-grid-list cols="1" rowHeight="50px" style="text-align: end;">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+        </mat-grid-tile>
+        <button mat-raised-button color="primary" (click)="LoadData()"> <mat-icon>repeat</mat-icon> Update Dashboard</button>
+    </mat-grid-list>
+    <mat-card>
+        <mat-card-content class="dashboard-card-content">
+            <div>
+                <app-my-line-chart></app-my-line-chart>
+            </div>
+            <span class="chart-line"></span><hr/>
+            <div>
+                <app-radar-chart></app-radar-chart>
+            </div>
+            <span class="chart-line"></span><hr/>
+            <div>
+                <app-ba-radar-chart></app-ba-radar-chart>
+            </div>
+            <span class="chart-line"></span><hr/>
+            <div>
+                <app-doughnut-chart></app-doughnut-chart>
+            </div>
+        </mat-card-content>
+    </mat-card>

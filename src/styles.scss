@@ -1,0 +1,71 @@
+//Material custome theming ...
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+ 
+@import '~@angular/material/theming'; 
+
+@include mat-core();
+
+ 
+$candy-app-primary: mat-palette($mat-pink);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// Set an optional (defaults to pink ).
+$candy-app-warn:    mat-palette($mat-pink);
+
+ 
+$candy-app-theme: mat-dark-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+ 
+
+.Material-dark-theme{
+
+@include angular-material-theme($candy-app-theme);
+height: 100%;
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #424242;
+    color: white;
+
+}
+
+}
+.toast-info
+{
+    background-color: #3f51b5;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    color: white; 
+}
+
+.toast-success,.toast-warning,.toast-info,.toast.danger
+{
+    -webkit-animation-name: tostercustomanimationlefttoright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: tostercustomanimationlefttoright;
+    animation-duration: 1s; 
+}
+ 
+ 
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes tostercustomanimationlefttoright {
+        0%   { right:-100px;} 
+         
+        100% { right:0px;}
+      }  
+      /* Standard syntax */
+      @keyframes tostercustomanimationlefttoright {
+        0%   { right:-100px;} 
+         
+        100% { right:0px;}
+      }
+    

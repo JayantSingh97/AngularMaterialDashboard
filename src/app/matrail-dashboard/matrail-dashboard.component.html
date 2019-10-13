@@ -1,0 +1,155 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate" class="spiner"></mat-progress-bar>
+<div class="grid-container">
+    <h1 class="mat-h1" color="Primary">
+        <span><mat-icon>dashboard</mat-icon> Material Dashboard</span>
+    </h1>
+    <mat-grid-list cols="4" rowHeight="50px" style="text-align: end;">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+        </mat-grid-tile>
+        <button mat-raised-button color="primary" (click)="LoadData()"> <mat-icon>repeat</mat-icon> Update Dashboard</button>
+    </mat-grid-list> 
+    <mat-grid-list cols="4" rowHeight="170px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title> 
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item><mat-icon>fullscreen</mat-icon> Expand</button>
+                            <button mat-menu-item><mat-icon>delete_forever</mat-icon> Remove</button>
+                            <button mat-menu-item><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+                            <button mat-menu-item><mat-icon>vertical_align_bottom</mat-icon> Export</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title><mat-icon>touch_app</mat-icon> Clicks </mat-card-title>
+                    <mat-card-subtitle>Updating Live...</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>121212</h2>
+                    </mat-card-content>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title>
+
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item><mat-icon>fullscreen</mat-icon> Expand</button>
+                            <button mat-menu-item><mat-icon>delete_forever</mat-icon> Remove</button>
+                            <button mat-menu-item><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+                            <button mat-menu-item><mat-icon>vertical_align_bottom</mat-icon> Export</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title><mat-icon>trending_up</mat-icon> Impression </mat-card-title>
+                    <mat-card-subtitle>Updating Live...</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>121212</h2>
+                    </mat-card-content>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title> 
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item><mat-icon>fullscreen</mat-icon> Expand</button>
+                            <button mat-menu-item><mat-icon>delete_forever</mat-icon> Remove</button>
+                            <button mat-menu-item><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+                            <button mat-menu-item><mat-icon>vertical_align_bottom</mat-icon> Export</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title> <mat-icon>arrow_downward</mat-icon> Install </mat-card-title>
+                    <mat-card-subtitle>Updating Live...</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>121212</h2>
+                    </mat-card-content>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title>
+
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item><mat-icon>fullscreen</mat-icon> Expand</button>
+                            <button mat-menu-item><mat-icon>delete_forever</mat-icon> Remove</button>
+                            <button mat-menu-item><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+                            <button mat-menu-item><mat-icon>vertical_align_bottom</mat-icon> Export</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title><mat-icon>euro_symbol</mat-icon> Transaction </mat-card-title>
+                    <mat-card-subtitle>Updating Live...</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>121212</h2>
+                    </mat-card-content>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+    <mat-grid-list cols="2" rowHeight="450px">
+        <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title>
+
+                        <mat-icon>track_changes</mat-icon> Global {{card.title}} Live Data
+
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item><mat-icon>fullscreen</mat-icon> Expand</button>
+                            <button mat-menu-item><mat-icon>delete_forever</mat-icon> Remove</button>
+                            <button mat-menu-item><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+                            <button mat-menu-item><mat-icon>vertical_align_bottom</mat-icon> Export</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashboard-card-content">
+                    <div *ngIf="card.title == 'Clicks'">
+                        <app-my-line-chart></app-my-line-chart>
+                    </div>
+                    <div *ngIf="card.title == 'Impression'">
+                        <app-radar-chart></app-radar-chart>
+                    </div>
+                    <div *ngIf="card.title == 'Install'">
+                        <app-ba-radar-chart></app-ba-radar-chart>
+                    </div>
+                    <div *ngIf="card.title == 'Transaction'">
+                        <app-doughnut-chart></app-doughnut-chart>
+                    </div>
+                    <div *ngIf="card.title == 'Table'">
+                        <app-matrail-table></app-matrail-table>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+
+
