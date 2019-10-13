@@ -6,15 +6,24 @@
 
 #Dashbard UI
 
-1.UI 1
+1.UI Light
 ![alt text](https://lh3.googleusercontent.com/B_OTuabWbqaijRSgzejor3ie2b45A2EfkFBRjX3Zm1d4yUg8x083YazDa-DePRcIfumnksrgNk2sEZLkjApmSltXuhvDNkQANASgvIB54YDTiZd-UIKEWJPVc5MSQ_PqekG19yBA=w1280-h618-no)
 
-2.UI 2
+2.UI Dark
+ 
+![alt text](https://lh3.googleusercontent.com/_JOikXCvy6G_HjedpuThkW3_6rTdXa8N14qkXOBlOWln76XkyGgv5Me5iDNIQxEr8FBWQlvAGk_OO6LfQuNx38QlGyVxYAvqJ-q_D7UnKR4diMp0Q-oT77Ajl4kyxBRpJpnTmgL2=w1280-h612-no)
+
+
+2.UI Mobile shopping.
  
 ![alt text](https://lh3.googleusercontent.com/qTyiOc_Fi_bOp795V8cDhdlytVnA19laIsrpWtvzptmrSf1S0f0LjmLf_ytKBI1932h2zfuPleXrBi1KjJoy2KkSP9c1ZtfHOTT_Hv07NuwDUqMfxWZEvsyoYuPN94aLb9lSIRSP=w1280-h610-no)
+
+
+
 ***
 # project Configuration information.
 1. If you are facing any compilation issue then simply run the following command in your command prompt under your AngularApplication       directory.
+
 
 2. ```npm i```
 
