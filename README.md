@@ -4,7 +4,7 @@
 1. This is an admin dashboard template created on angular material. this project covers most of the components of angular material.
 2. All the dependencies are listed down in tabular form which have been used in this project.
 
-#Dashbard UI
+#Dashboard UI
 
 1.UI Light
 ![alt text](https://lh3.googleusercontent.com/B_OTuabWbqaijRSgzejor3ie2b45A2EfkFBRjX3Zm1d4yUg8x083YazDa-DePRcIfumnksrgNk2sEZLkjApmSltXuhvDNkQANASgvIB54YDTiZd-UIKEWJPVc5MSQ_PqekG19yBA=w1280-h618-no)
